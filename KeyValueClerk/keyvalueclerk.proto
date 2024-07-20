@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package KeyValueClerk;
+
+option go_package = "./KeyValue";
+
+service MapServiceClerk {
+    rpc Get (GetRequest) returns (GetResponse) {};
+    rpc Put (PutRequest) returns (PutResponse) {};
+    rpc Append (AppendRequest) returns (AppendResponse) {};
+}
+
+message GetRequest {
+    string key = 1;
+}
+
+message GetResponse {
+    string key = 1;
+    string value = 2;
+}
+
+
+message PutRequest {
+    string key = 1;
+    string value = 2;
+}
+
+message PutResponse {
+    bool success = 1;
+}
+
+message AppendRequest {
+    string key = 1;
+    string value = 2;
+}
+
+message AppendResponse {
+    string oldval = 1;
+}
