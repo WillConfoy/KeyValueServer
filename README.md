@@ -1,0 +1,1 @@
+Key Value server that I made for a school project. It uses a client, which makes requests to a clerk, which talks to a server so that the requests can be enacted. In other words, the client can never directly contact the server. As the name suggests, all it really does right now is store a dictionary on a server and allow clients to change it and fetch current values.
